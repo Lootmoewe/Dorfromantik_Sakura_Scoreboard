@@ -488,7 +488,7 @@ function App() {
     <div style={{ textAlign: "center", marginBottom: 24 }}>
       <div
         style={{
-          backgroundColor: "#505a35",
+          backgroundColor: "#18846c",
           padding: 20,
           borderRadius: 12,
           boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
@@ -500,7 +500,7 @@ function App() {
     </div>
     <h2 style={{ marginTop: 0 }}>Erweiterungen aktivieren</h2>
     <div style={{
-      backgroundColor: "#d5dcb6",
+      backgroundColor: "#c5dcd2",
       padding: 20,
       borderRadius: 12,
       boxShadow: "0 2px 6px rgba(0,0,0,0.1)"
@@ -560,7 +560,7 @@ function App() {
       <div style={{ textAlign: "center", marginBottom: 24 }}>
       <div
         style={{
-          backgroundColor: "#505a35",
+          backgroundColor: "#18846c",
           padding: 20,
           borderRadius: 12,
           boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
@@ -575,7 +575,7 @@ function App() {
       <h2 style={{ marginTop: 0, marginBottom: 16, textalign:"center" }}>Aufträge</h2>
       <div
         style={{
-          backgroundColor: "#d5dcb6",
+          backgroundColor: "#c5dcd2",
           padding: 20,
           borderRadius: 12,
           boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
@@ -666,7 +666,7 @@ function App() {
       <div style={{ textAlign: "center", marginBottom: 24 }}>
       <div
         style={{
-          backgroundColor: "#505a35",
+          backgroundColor: "#18846c",
           padding: 20,
           borderRadius: 12,
           boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
@@ -681,7 +681,7 @@ function App() {
       {/* Card for Fahnen & Längste */}
       <div
   style={{
-    backgroundColor: "#d5dcb6",
+    backgroundColor: "#c5dcd2",
     padding: 20,
     borderRadius: 12,
     marginBottom: 36,
@@ -753,7 +753,7 @@ function App() {
     columnGap: 32,
     rowGap: 16,
     padding: 20,
-    backgroundColor: "#d5dcb6",
+    backgroundColor: "#c5dcd2",
     borderRadius: 12,
     marginBottom: 32,
     boxShadow: "0 2px 6px rgba(0,0,0,0.1)"
@@ -873,7 +873,7 @@ function App() {
         columnGap: 32,
         rowGap: 16,
         padding: 20,
-        backgroundColor: "#d5dcb6",
+        backgroundColor: "#c5dcd2",
         borderRadius: 12,
         marginBottom: 32,
         boxShadow: "0 2px 6px rgba(0,0,0,0.1)"
@@ -944,7 +944,7 @@ function App() {
   <div style={{ textAlign: "center", marginBottom: 24 }}>
   <div
         style={{
-          backgroundColor: "#505a35",
+          backgroundColor: "#18846c",
           padding: 20,
           borderRadius: 12,
           boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
@@ -957,7 +957,7 @@ function App() {
   <h2 style={{ marginTop: 0 }}>Ergebnisse</h2>
   <div
     style={{
-      backgroundColor: "#d5dcb6",
+      backgroundColor: "#c5dcd2",
       padding: 24,
       borderRadius: 12,
       boxShadow: "0 2px 6px rgba(0,0,0,0.1)",

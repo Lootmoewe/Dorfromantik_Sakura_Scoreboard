@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'League Spartan', sans-serif;
-  background-color: #a2bb71;
+  background-color: #a6cfbe;
   color: #000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -58,7 +58,7 @@ button {
   padding: 12px 24px;
   border: none;
   border-radius: 14px;
-  background-color: #505a35;
+  background-color: #18846c;
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -68,7 +68,7 @@ button {
 }
 
 button:hover {
-  background-color: #507435;
+  background-color: #18986c;
 }
 
 input,
