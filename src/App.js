@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './App.css';
 
 //Logo
-import Logo from './assets/Dorfromantik.png';
+import Logo from './assets/Dorfromantik_Sakura.png';
 
 // Wald
 import Wald from './assets/Wald.png';
@@ -39,16 +39,15 @@ import Fluss_6 from './assets/Fluss_active_6.png';
 
 //Rundum
 import Rundum from './assets/Rundum.png';
-import Rundum_3 from './assets/Rundum_active_3.png';
 import Rundum_4 from './assets/Rundum_active_4.png';
 import Rundum_5 from './assets/Rundum_active_5.png';
 import Rundum_6 from './assets/Rundum_active_6.png';
 
 //Doppelauf
 import Doppelauf from './assets/Doppel.png';
-import Doppelauf_Wald_Feld_active_6 from './assets/Doppel_Wald_Feld_active_6.png';
-import Doppelauf_Dorf_Wald_active_6 from './assets/Doppel_Dorf_Wald_active_6.png';
-import Doppelauf_Feld_Dorf_active_6 from './assets/Doppel_Feld_Dorf_active_6.png';
+import Doppelauf_Wald_Feld_active_7 from './assets/Doppel_Wald_Feld_active_7.png';
+import Doppelauf_Dorf_Wald_active_7 from './assets/Doppel_Dorf_Wald_active_7.png';
+import Doppelauf_Feld_Dorf_active_7 from './assets/Doppel_Feld_Dorf_active_7.png';
 
 // Wald done
 import Wald_done_4 from './assets/Wald_done_4.png';
@@ -79,15 +78,14 @@ import Fluss_done_5 from './assets/Fluss_done_5.png';
 import Fluss_done_6 from './assets/Fluss_done_6.png';
 
 // Rundum done
-import Rundum_done_3 from './assets/Rundum_done_3.png';
 import Rundum_done_4 from './assets/Rundum_done_4.png';
 import Rundum_done_5 from './assets/Rundum_done_5.png';
 import Rundum_done_6 from './assets/Rundum_done_6.png';
 
 // Doppelauf done
-import Doppelauf_Wald_Feld_done_6 from './assets/Doppel_Wald_Feld_done_6.png';
-import Doppelauf_Dorf_Wald_done_6 from './assets/Doppel_Dorf_Wald_done_6.png';
-import Doppelauf_Feld_Dorf_done_6 from './assets/Doppel_Feld_Dorf_done_6.png';
+import Doppelauf_Wald_Feld_done_7 from './assets/Doppel_Wald_Feld_done_7.png';
+import Doppelauf_Dorf_Wald_done_7 from './assets/Doppel_Dorf_Wald_done_7.png';
+import Doppelauf_Feld_Dorf_done_7 from './assets/Doppel_Feld_Dorf_done_7.png';
 
 //Fahnen & Längste
 import Wald_Fahne from './assets/Wald_Fahne.png';
@@ -95,42 +93,37 @@ import Feld_Fahne from './assets/Feld_Fahne.png';
 import Dorf_Fahne from './assets/Dorf_Fahne.png';
 import Schiene_max from './assets/Schiene_max.png';
 import Fluss_max from './assets/Fluss_max.png';
+import Rundum_max from './assets/Rundum_max.png';
 
 const imageMap = {
   Wald: {
     4: Wald_4,
     5: Wald_5,
     6: Wald_6,
-    7: Wald_7,
     done: {
       4: Wald_done_4,
       5: Wald_done_5,
       6: Wald_done_6,
-      7: Wald_done_7,
     }
   },
   Feld: {
     4: Feld_4,
     5: Feld_5,
     6: Feld_6,
-    7: Feld_7,
     done: {
       4: Feld_done_4,
       5: Feld_done_5,
       6: Feld_done_6,
-      7: Feld_done_7,
     }
   },
   Dorf: {
     4: Dorf_4,
     5: Dorf_5,
     6: Dorf_6,
-    7: Dorf_7,
     done: {
       4: Dorf_done_4,
       5: Dorf_done_5,
       6: Dorf_done_6,
-      7: Dorf_done_7,
     }
   },
   Schiene: {
@@ -154,49 +147,47 @@ const imageMap = {
     }
   },
   Rundum: {
-    3: Rundum_3,
     4: Rundum_4,
     5: Rundum_5,
     6: Rundum_6,
     done: {
-      3: Rundum_done_3,
       4: Rundum_done_4,
       5: Rundum_done_5,
       6: Rundum_done_6,
     }
   },
   Doppelauf: {
-    0: Doppelauf_Wald_Feld_active_6,
-    1: Doppelauf_Dorf_Wald_active_6,
-    2: Doppelauf_Feld_Dorf_active_6,
+    0: Doppelauf_Wald_Feld_active_7,
+    1: Doppelauf_Dorf_Wald_active_7,
+    2: Doppelauf_Feld_Dorf_active_7,
     done: {
-      0: Doppelauf_Wald_Feld_done_6,
-      1: Doppelauf_Dorf_Wald_done_6,
-      2: Doppelauf_Feld_Dorf_done_6,
+      0: Doppelauf_Wald_Feld_done_7,
+      1: Doppelauf_Dorf_Wald_done_7,
+      2: Doppelauf_Feld_Dorf_done_7,
     }
   }
 };
 
 // Category setup
 const categories = [
-  { key: "wald", label: "Wald", color: "#97b461", light: "#c6dcaa" },
-  { key: "feld", label: "Feld", color: "#fcc02f", light: "#ffe68d" },
-  { key: "dorf", label: "Dorf", color: "#bf5f56", light: "#e4a39d" },
-  { key: "schiene", label: "Schiene", color: "#7e5842", light: "#b79d8b" },
-  { key: "fluss", label: "Fluss", color: "#85cdd2", light: "#c1e5e7" },
-  { key: "rundum", label: "Rundum", color: "#323232", light: "#888888" },
-  { key: "doppelauf", label: "Doppelauf", color: "#444444", light: "#bbbbbb" }
+{ key: "wald", label: "Wald", color: "#ef95bf", light: "#ef95bf" },
+{ key: "feld", label: "Feld", color: "#89c876", light: "#89c876" },
+{ key: "dorf", label: "Dorf", color: "#bb6661", light: "#bb6661" },
+{ key: "schiene", label: "Schiene", color: "#6c4f40", light: "#6c4f40" },
+{ key: "fluss", label: "Fluss", color: "#70cbcf", light: "#70cbcf" },
+{ key: "rundum", label: "Rundum", color: "#40384d", light: "#40384d" },
+{ key: "doppelauf", label: "Doppelauf", color: "#ffffff", light: "#ffffff" }
 ];
 
 // Tasks for each category
 const tasksData = {
-  wald:   [4,4,5,5,6,6,7],
-  feld:   [4,4,5,5,6,6,7],
-  dorf:   [4,4,5,5,6,6,7],
+  wald:   [4,4,5,5,6,6],
+  feld:   [4,4,5,5,6,6],
+  dorf:   [4,4,5,5,6,6],
   schiene:[4,4,5,5,6,6],
   fluss:  [4,4,5,5,6,6],
-  rundum: [3, 4, 5, 6],
-  doppelauf: [6, 6, 6]
+  rundum: [4,4,5,5,6,6,],
+  doppelauf: [7, 7, 7]
 };
 
 // Images for Task Buttons
@@ -214,21 +205,27 @@ const extraFields = [
   { key: "feld_fahnen", label: "Fahnen (Feld)", cat: "feld" },
   { key: "dorf_fahnen", label: "Fahnen (Dorf)", cat: "dorf" },
   { key: "schiene_laengste", label: "Längste Schiene", cat: "schiene" },
-  { key: "fluss_laengste", label: "Längster Fluss", cat: "fluss" }
+  { key: "fluss_laengste", label: "Längster Fluss", cat: "fluss" },
+  { key: "rundum_laengste", label: "Längster Rundum", cat: "rundum" }
 ];
 
 // Freigespielt (manual input fields & checkboxes, page 2)
 const freigespieltFields = [
-  { key: "rote_herzen", label: "Rote Herzen", max: 24, type: "number" },
-  { key: "zirkus", label: "Zirkus", type: "checkbox", points: 10 },
-  { key: "bahnwaerter", label: "Bahnwärter", type: "even" },
-  { key: "schaeferin", label: "Schäferin", type: "even" },
-  { key: "huegel", label: "Hügel", type: "even" },
-  { key: "baustelle", label: "Baustelle", type: "baustelle" },
-  { key: "ballon", label: "Ballon-Startplatz", type: "even" },
-  { key: "goldenes_herz", label: "Goldenes Herz", max: 12, type: "number" },
-  { key: "bahnhof", label: "Bahnhof", type: "number" },
-  { key: "hafen", label: "Hafen", type: "number" },
+  { key: "kirschblueten", label: "Kirschblüten", max: 24, type: "number" },
+  { key: "tempel", label: "Tempel", type: "checkbox", points: 6 },
+  { key: "heisse_quellen_1", label: "Heiße Quellen", type: "number" },
+  { key: "heisse_quellen_2", label: "", type: "number" },
+  { key: "bruecken", label: "Brücken", type: "number" },
+  { key: "tore", label: "Tore", type: "number" },
+  { key: "einsiedler", label: "Einsiedler", type: "number" },
+  { key: "sternwarte", label: "Steernwarte", type: "number" },
+  { key: "kartograph", label: "Kartograph", max: 12, type: "even" },
+  { key: "sumoringer", label: "Sumoringer", type: "number" },
+  { key: "moossammlerin", label: "Moossammlerin", type: "number" },
+  { key: "reisbaeuerin", label: "Reisbäuerin", type: "number" },
+  { key: "schiff_anlegestelle", label: "Schiff-Anlegestelle", type: "number" },
+  { key: "ochsenkarren_handelsposten", label: "Ochsenkarren-Handelsposten", type: "number" },
+  { key: "poet", label: "Poet", type: "number" },
 ];
 
 const freigespieltFieldsPlus = [
@@ -305,13 +302,14 @@ function evenInput(value, max) {
   return n.toString();
 }
 
+
 function App() {
 
   const [page, setPage] = useState(0);
   const [extensions, setExtensions] = useState({
-    duell: false,
-    grosseMuehle: false,
-    wetterau: false
+    duell: true,
+    //grosseMuehle: false,
+    //wetterau: false
   });
   
   const handleExtensionChange = (key) => {
@@ -319,10 +317,12 @@ function App() {
 };
 
   const [taskStates, setTaskStates] = useState(() => {
-    const state = {};
-    for (let cat in tasksData) state[cat] = tasksData[cat].map(() => 0);
-    return state;
-  });
+  const state = {};
+  for (let cat in tasksData) {
+    state[cat] = tasksData[cat].map(() => 0);
+  }
+  return state;
+});
   const [extras, setExtras] = useState(() => {
     const st = {};
     extraFields.forEach(f => st[f.key] = "");
@@ -461,21 +461,27 @@ function App() {
   .filter(cat => !["rundum","doppelauf"].includes(cat.key))
   .map(cat => (
     <td key={cat.key}
-            style={{
-              textAlign: "center",
-              width: cellWidth,
-              padding: 0
-            }}
-          >
-            {tasksData[cat.key][row] !== undefined ? (
-              <TaskButton
-              value={tasksData[cat.key][row]}
-              state={taskStates[cat.key][row]}
-              onClick={() => handleTaskClick(cat.key, row)}
-              catLabel={cat.label}
-            />
-            ) : null}
-          </td>
+  style={{
+    textAlign: "center",
+    width: cellWidth,
+    padding: 0
+  }}
+>
+  {tasksData[cat.key][row] !== undefined ? (
+    <div style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
+    }}>
+      <TaskButton
+        value={tasksData[cat.key][row]}
+        state={taskStates[cat.key][row]}
+        onClick={() => handleTaskClick(cat.key, row)}
+        catLabel={cat.label}
+      />
+    </div>
+  ) : null}
+</td>
         ))}
       </tr>
     );
@@ -498,7 +504,7 @@ function App() {
         <img src={Logo} alt="Dorfromantik Logo" style={{ height: 80 }} />
       </div>
     </div>
-    <h2 style={{ marginTop: 0 }}>Erweiterungen aktivieren</h2>
+    {/*<h2 style={{ marginTop: 0 }}>Erweiterungen aktivieren</h2>
     <div style={{
       backgroundColor: "#c5dcd2",
       padding: 20,
@@ -544,7 +550,7 @@ function App() {
   ))}
 </div>
     </div>
-
+*/}
     <div style={{ textAlign: "center", marginTop: 24 }}>
       <button onClick={() => setPage(1)}>Spiel starten</button>
     </div>
@@ -579,11 +585,9 @@ function App() {
           padding: 20,
           borderRadius: 12,
           boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-          marginBottom: 24,
-
+          marginBottom: 24
         }}
       >
-        
         <table
           style={{
             borderCollapse: "collapse",
@@ -593,7 +597,6 @@ function App() {
             width: "100%"
           }}
         >
-          
           <tbody>
             {taskRows}
           </tbody>
@@ -602,6 +605,7 @@ function App() {
         <div style={{
   display: "flex",
   justifyContent: "center",
+  textalign: "center",
   gap: 12,
   flexWrap: "wrap",
   marginBottom: 0
@@ -720,7 +724,8 @@ function App() {
   <div style={{ display: "flex", justifyContent: "center", gap: 40 }}>
     {[ 
       { key: "schiene_laengste", img: Schiene_max },
-      { key: "fluss_laengste", img: Fluss_max }
+      { key: "fluss_laengste", img: Fluss_max },
+      { key: "rundum_laengste", img: Rundum_max}
     ].map(({ key, img }) => (
       <div key={key} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
         <img src={img} alt={key} style={{ width: 48, height: 48 }} />
@@ -765,16 +770,21 @@ function App() {
   <div style={{ fontSize: 20, fontWeight: 700 }}>{f.label}</div>
   {(() => {
     const hintMap = {
-            rote_herzen: "(1/passender Kante)",
-            zirkus: "(umschlossen = 10)",
-            bahnwaerter: "(2/Bahnübergang)",
-            schaeferin: "(1/Schaf)",
-            huegel: "(im Abstand 2 = 2/Auftrag)",
-            baustelle: "(pro Gebiet 7+ = 7)",
-            ballon: "(2/Entfernung)",
-            goldenes_herz: "(2/passender Kante)",
-            bahnhof: "(beendet = 1/Plättchen)",
-            hafen: "(beendet = 1/Plättchen)"
+            kirschblueten: "gesammelt",
+            tempel: "(passend umschlossen = 6)",
+            heisse_quellen_1: "(abgeschlossen = 3)",
+            heisse_quellen_2: "(3/Rundumauftrag)",
+            bruecken: "(längste Fluss = 5/Brücke)",
+            tore: "(längste Straße) 5/Tor)",
+            einsiedler: "(3/freier Kante)",
+            sternwarte: "(abgeschlossenesFahnengebiet (FG) = 3/abgeschlossees FG)",
+            kartograph: "(Blickrichtung = 2/Auftrag",
+            sumoringer: "(1/passender Kante)",
+            moossammlerin: "(1/passender Kante)",
+            reisbaeuerin: "(1/passender Kante)",
+            schiff_anlegestelle: "(1/Plättchen dazwischen)",
+            ochsenkarren_handelsposten: "1/Plättchen dazwischen)",
+            poet: "(3/Wiesenkante)"
           };
           return hintMap[f.key] ? (
       <div style={{ fontSize: 14, color: "#888", marginTop: 2 }}>
@@ -802,7 +812,7 @@ function App() {
       style={{
         width: 20,
         height: 20,
-        accentColor: "#505a35",
+        accentColor: "#18846c",
         cursor: "pointer",
         marginLeft: 2
       }}
@@ -864,7 +874,7 @@ function App() {
   ))}
 </div>
 
-{(extensions.duell || extensions.grosseMuehle || extensions.wetterau) && (
+{/*{(extensions.duell || extensions.grosseMuehle || extensions.wetterau) && (
   <>
     <div
       style={{
@@ -925,10 +935,11 @@ function App() {
             />
           </div>
         ))}
+        
     </div>
   </>
 )}
-
+*/}
 <div style={{ textAlign: "center" }}>
       <button type="button" onClick={handleBackExtras} style={{marginRight:16}}>Zurück</button>
       <button type="submit" >Weiter</button><br/>
@@ -982,30 +993,34 @@ function App() {
     <tr>
       <th style={{
         textAlign: "center",
-        border: "1px solid #a2bb71",
-        backgroundColor: "#f8f8f8",
+        border: "1px solid #ffffff",
+        borderBottom: "3px solid #ffffff",
+        backgroundColor: "#ee85a1",
         padding: "8px"
       }}>
         {/* empty cell for icons */}
       </th>
       <th style={{
         textAlign: "center",
-        border: "1px solid #a2bb71",
-        backgroundColor: "#f8f8f8",
+        border: "1px solid #ffffff",
+        borderBottom: "3px solid #ffffff",
+        backgroundColor: "#ee85a1",
         padding: "8px"
       }}>Aufträge</th>
       <th style={{
         textAlign: "center",
-        border: "1px solid #a2bb71",
-        backgroundColor: "#f8f8f8",
+        border: "1px solid #ffffff",
+        borderBottom: "3px solid #ffffff",
+        backgroundColor: "#ee85a1",
         padding: "8px"
       }}>Fahnen/<br/>Längste</th>
       <th style={{
         textAlign: "center",
-        border: "1px solid #a2bb71",
-        backgroundColor: "#f8f8f8",
+        border: "1px solid #ffffff",
+        borderBottom: "3px solid #ffffff",
+        backgroundColor: "#ee85a1",
         padding: "8px"
-      }}>doppelt</th>
+      }}>Doppelt</th>
     </tr>
   </thead>
   <tbody>
@@ -1022,7 +1037,8 @@ function App() {
           style={{
             textAlign: "center",
             padding: "8px",
-            border: "1px solid #a2bb71"
+            border: "1px solid #ffffff",
+            backgroundColor: "#ee85a1"
           }}
         >
           <div
@@ -1053,9 +1069,10 @@ function App() {
           style={{
             textAlign: "center",
             padding: "8px",
-            border: "1px solid #a2bb71",
+            border: "1px solid #ffffff",
             color: cat.color,
-            fontWeight: "bold"
+            fontWeight: "bold",
+            backgroundColor: "#f2abad"
           }}
         >
           
@@ -1065,9 +1082,10 @@ function App() {
           style={{
             textAlign: "center",
             padding: "8px",
-            border: "1px solid #a2bb71",
+            border: "1px solid #ffffff",
             color: cat.color,
-            fontWeight: "bold"
+            fontWeight: "bold",
+            backgroundColor: "#f2abad"
           }}
         >
           {results.fahnen[cat.key]}
@@ -1076,9 +1094,10 @@ function App() {
           style={{
             textAlign: "center",
             padding: "8px",
-            border: "1px solid #a2bb71",
+            border: "1px solid #ffffff",
             color: cat.color,
-            fontWeight: "bold"
+            fontWeight: "bold",
+            backgroundColor: "#f2abad"
           }}
         >
           {results.auftraege[cat.key].double}
@@ -1088,36 +1107,36 @@ function App() {
       
     ))}
   </tbody>
-  <tr style={{ backgroundColor: "#f8f8f8", fontWeight: "bold" }}>
+  <tr style={{ backgroundColor: "#ee85a1", fontWeight: "bold" }}>
   <td style={{
     textAlign: "center",
     padding: "8px",
-    border: "1px solid #a2bb71",
-    borderTop: "3px solid #a2bb71"
+    border: "1px solid #ffffff",
+    borderTop: "3px solid #ffffff",
   }}>
     Σ
   </td>
   <td style={{
     textAlign: "center",
     padding: "8px",
-    border: "1px solid #a2bb71",
-    borderTop: "3px solid #a2bb71"
+    border: "1px solid #ffffff",
+    borderTop: "3px solid #ffffff"
   }}>
     {results.auftraegeSum}
   </td>
   <td style={{
     textAlign: "center",
     padding: "8px",
-    border: "1px solid #a2bb71",
-    borderTop: "3px solid #a2bb71"
+    border: "1px solid #ffffff",
+    borderTop: "3px solid #ffffff"
   }}>
     {results.fahnenSum}
   </td>
   <td style={{
     textAlign: "center",
     padding: "8px",
-    border: "1px solid #a2bb71",
-    borderTop: "3px solid #a2bb71"
+    border: "1px solid #ffffff",
+    borderTop: "3px solid #ffffff"
   }}>
     {results.extrasSum}
   </td>
